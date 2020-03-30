@@ -1,0 +1,242 @@
+html, body {
+  background-color: #fff8dc;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+::selection {
+  color: black;
+  background: red;
+}
+li {
+  list-style: none;
+}
+h3 {
+  margin: 0 0 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content:center;
+}
+.top {
+  display: grid;
+  grid-template-columns: max-content max-content 1fr max-content;
+  padding: 30px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+  background-color: #fff8dc;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+#logo {
+  padding-right: 30px;
+  border-right: 2px solid #2f4f4f;
+}
+#top_list {
+  display: inline;
+  margin: 0 10px 0 10px;
+}
+#menu_bar {
+  display: none;
+}
+.top_list {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+#top_a {
+  color: black;
+  text-decoration: none;
+}
+.body {
+
+}
+.sideBar {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  height: 100%;
+  max-width: 30vw;
+  border-right: 1px solid gray;
+}
+.date {
+  text-align: center;
+  padding: 50px 30px 50px 30px;
+  border-bottom: 1px solid gray;
+}
+.date_f {
+  margin: 0;
+  font-family: impact;
+  font-size: 120px;
+  line-height: 100px;
+}
+.contact {
+  text-align: center;
+  padding: 30px 30px 30px 30px;
+}
+#contact_a {
+  font-size: 20px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+#contact_p {
+  font-size: 20px;
+}
+.sns_btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0px;
+  border: 0;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  box-shadow: none;
+}
+.sns_btn:hover {
+  background-color: #fff8dc;
+  color: black;
+}
+.sns_btn:focus {
+  outline: none;
+}
+/* 화면 상단 토글 이미지 시작*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  margin: auto auto auto auto;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff8dc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: black;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+/*화면 상단 토글 이미지 끝*/
+/* 본문 */
+.main {
+  left: 26vw;
+  margin-left: 35vw;
+  margin-right: 0;
+  margin-bottom: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 150px;
+  max-width: 800px;
+}
+.p::before {
+  content: "---";
+  letter-spacing: -1.5px;
+  width:10px;
+}
+#title {
+  font-size: 30px;
+  font-family: impact;
+}
+#pit {
+  width: 100%;
+}
+#img_exp {
+  font-size: 10px;
+  font-family: Verdana;
+  color: gray;
+  text-align: center;
+}
+#qhsans {
+  font-size: 20px;
+  text-align: justify;
+}
+/* 본문 */
+@media(max-width:900px) {
+  .sideBar {
+    display: none;
+  }
+  .main {
+    max-width: 900px;
+    margin-left: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 150px;
+  }
+  .switch {
+    display: none;
+  }
+  #top_list {
+    display: none;
+  }
+  #search_btn {
+    display: none;
+  }
+  #menu_bar {
+    display: inline;
+  }
+  .search_btn {
+    display: none;
+  }
+  #qhsans {
+    font-size: 20px;
+    text-align: left;
+  }
+}
+/* footer */
+footer {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  color: white;
+  position: relative;
+  padding: 20px;
+}
+#footer_li {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: inline;
+
+}
+#footer_a {
+  color: white;
+  text-decoration: none;
+}
